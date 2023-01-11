@@ -4,26 +4,28 @@ const Main = styled.div`
     width: 1312px;
     height: 928px;
     display: flex;
-    flex-direction: row;
+    flex-flow: column wrap;
     border: 25px black solid;`;
 
 
-const Frame1 = styled.img`
+const Frame1 = styled.div`
     width: 640px;
     height: 928px;
-    background-color: #3d3d3d; 
+    background-color: #3d3d3d;
+    margin-right: 32px; 
     `;
 
-const Frame2 = styled.img`
+const Frame2 = styled.div`
     width: 640px;
     height: 544px;
     background-color: #D9D9D9; 
     `;
 
-const Frame3 = styled.img`
+const Frame3 = styled.div`
     width: 640px;
-    height: 100px;
-    background-color: #D9D9D9; 
+    height: 352px;
+    background-color: #D0D0D0;
+    margin-top: 32px;
     `;
 
 function Ill (props) {
