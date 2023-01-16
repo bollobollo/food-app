@@ -1,11 +1,16 @@
 import './App.css';
 import Ill from './home-illustration.js'
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  display: flex;
+  `;
 
 function App() {
   return (
-    <div className="App">
+    <Wrapper className="App">
       <Ill/>
-    </div>
+    </Wrapper>
   );
 }
 
