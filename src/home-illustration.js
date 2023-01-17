@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Main = styled.div`
+const Wrapper = styled.div`
     display: flex;
     flex-flow: column wrap;
     width: 1312px;
@@ -30,11 +30,11 @@ const Frame3 = styled.div`
 
 function Ill (props) {
     return(
-        <Main>
+        <Wrapper>
             <Frame1/>
             <Frame2/>
             <Frame3/>
-        </Main>
+        </Wrapper>
     )
 }
 
