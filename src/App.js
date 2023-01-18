@@ -4,8 +4,9 @@ import styled, {css} from "styled-components";
 
 const Wrapper = styled.div`
   // Dimensiones de la caja
+  box-sizing: content-box;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   max-width: 2000px;
   min-width: 800px;
   // Definición de rejilla y dimensiones de retícula
@@ -23,6 +24,7 @@ const Box = styled.div`
   background: gray;
   border-radius: 2vw;
   word-wrap: break-word;
+  margin-bottom: 1em;
   //Posicionamiento por línea
   grid-column: 1;
   grid-row: 1 / 9;
@@ -57,7 +59,12 @@ const Text = styled.p`
 
 function App() {
   return (
-    <div>
+    <div style={{background: "green", paddingTop: "1em"}}>
+      <Wrapper className="App">
+        <Box>Hola</Box>
+        <Box two>Hola</Box>
+        <Box three wide>Hola</Box>
+      </Wrapper>
       <Wrapper className="App">
         <Box>Hola</Box>
         <Box two>Hola</Box>
