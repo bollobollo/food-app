@@ -5,15 +5,16 @@ const Wrapper = styled.div`
     flex-flow: column wrap;
     width: 1312px;
     height: 928px;
-    border: 25px black solid;`;
+    border: 25px black solid;
+    align-items: center;
+    justify-content: center;`;
 
 
 const Frame1 = styled.div`
     width: 640px;
     height: 928px;
     background-color: #3d3d3d;
-    margin-right: 32px; 
-    `;
+    margin-right: 32px;`;
 
 const Frame2 = styled.div`
     width: 640px;
