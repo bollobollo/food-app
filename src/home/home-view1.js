@@ -46,7 +46,14 @@ const Box = styled.div`
     grid-row: 6 / 9;
 
     ${props => props.wide && css`
-      color: green;
+      padding-left: .25em;
+      background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(81,0,255,1) 95%);
+      color: white;
+      text-align: left;
+      font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+      font-weight: bold;
+      font-size: 7vw;
     `}
   `}
 `;
@@ -63,8 +70,8 @@ const Image = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  max-height: 300%;
-  max-width: 300%`;
+  max-height: 100%;
+  max-width: 100%`;
 
 function HView1() {
   return (
@@ -73,7 +80,7 @@ function HView1() {
       <Wrapper className="App" style={{}}>
           <Box><Image src={"https://images.unsplash.com/photo-1595257841889-eca2678454e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"}></Image></Box>
           <Box two>Hola</Box>
-          <Box three wide>Hola</Box>
+          <Box three wide>¿Qué comemos hoy?</Box>
       </Wrapper>
     </div>
   );
