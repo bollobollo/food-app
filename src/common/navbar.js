@@ -3,7 +3,7 @@ import styled, {css} from "styled-components";
 const Nav_bg = styled.div`
   box-sizing: content-box;
   height: 6vh;
-  width: 100vw;
+  width: 100%;
   max-width: 2000px;
   min-width: 800px;
   max-height: 256px;

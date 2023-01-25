@@ -5,10 +5,12 @@ const Wrapper = styled.div`
   // Dimensiones de la caja
   box-sizing: content-box;
   height: 93vh;
-  width: 100vw;
+  width: 100%;
   max-width: 2000px;
   min-width: 800px;
   padding-top: 7vh;
+  padding-left: 2em;
+  padding-right: 2em;
   
 
   // Definición de rejilla, dimensiones de retícula y márgenes
@@ -36,6 +38,9 @@ const Box = styled.div`
     //Posicionamiento por línea
     grid-column: 2 / 3;
     grid-row: 1 / 6;
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(18 , 1fr);
   `}
 
   ${props => props.three && css`
@@ -46,14 +51,14 @@ const Box = styled.div`
     grid-row: 6 / 9;
 
     ${props => props.wide && css`
-      padding-left: .25em;
-      background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(81,0,255,1) 95%);
+      padding: .125em;
+      background: rgb(37,37,224);
+      background: linear-gradient(90deg, rgba(37,37,224,0) 10%, rgba(37,37,224,0.6503460912052117) 49%, rgba(37,37,224,1) 76%);
       color: white;
-      text-align: left;
+      text-align: right;
       font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
       font-weight: bold;
-      font-size: 7vw;
+      font-size: 6.7vw;
     `}
   `}
 `;
@@ -73,10 +78,14 @@ const Image = styled.img`
   max-height: 100%;
   max-width: 100%`;
 
+const Cat_Frames = styled.a`
+  grid-column: 1;
+  grid-row: 1 / 9;`;
+
 function HView1() {
   return (
-    <div style={{height: "100vh"}}>
-      <Nav></Nav>
+    <div style={{boxSizing: "content-box", height: "100vh", width: "100%", display: "flex"}}>
+      <Nav/>
       <Wrapper className="App" style={{}}>
           <Box><Image src={"https://images.unsplash.com/photo-1595257841889-eca2678454e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"}></Image></Box>
           <Box two>Hola</Box>

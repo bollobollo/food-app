@@ -6,7 +6,7 @@ import styled, {css} from "styled-components";
 
 function App() {
   return (
-    <div style={{background: "#3C0CA3", width: "100vw"}}>
+    <div style={{boxSizing: "content-box", background: "#3C0CA3", width: "100%"}}>
       <HView1/>
     </div>
   );
