@@ -37,7 +37,7 @@ const Box = styled.div`
   grid-row: 1 / 9;
 
   ${props => props.two && css`
-    background: #D9D9D9;
+    background: transparent;
     color: black;
     //Posicionamiento por línea
     grid-column: 2 / 3;
@@ -86,7 +86,7 @@ const Image = styled.img`
 //35 horizontal, 41 vertical
 
 const Cat_frames = styled.a`
-  border-radius: .2vh;
+  background: transparent;
   font-family: Times New Roman, "Trebuchet MS", Verdana, sans-serif;
   &:hover {
     animation: ${scale} 150ms cubic-bezier(0.1, 1.7, 1.0, 1.9) forwards;
@@ -119,14 +119,17 @@ const Cat_frames = styled.a`
   grid-row: 14 / 21;`}
   
   ${props => props.six && css`
+  border-radius: 0 0 0 2vh;
   background: pink;
   grid-column: 1 / 20;
   grid-row: 21 / 41;`}
   
   ${props => props.seven && css`
+  border-radius: 0 0 2vh 0;
   background: #FDC500;
   grid-column: 20 / 41;
   grid-row: 21 / 41;`};`
+
 
 function HView1() {
   return (
