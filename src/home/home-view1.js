@@ -1,5 +1,6 @@
 import styled, {css, keyframes} from "styled-components";
 import Nav from '../common/navbar.js';
+import Main_video from '../video/main_cook.mp4';
 
 const scale = keyframes`
   0%{transform: scale(1, 1);}
@@ -13,8 +14,8 @@ const Wrapper = styled.div`
   max-width: 2000px;
   min-width: 800px;
   padding-top: 7vh;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 4vw;
+  padding-right: 4vw;
   
 
   // Definición de rejilla, dimensiones de retícula y márgenes
@@ -75,7 +76,7 @@ const Text = styled.p`
   color: black;
 `;
 
-const Image = styled.img`
+const Video = styled.video`
   border-radius: 2vw;
   object-fit: cover;
   width: 100%;
@@ -136,7 +137,7 @@ function HView1() {
     <div style={{boxSizing: "content-box", height: "100vh", width: "100%", display: "flex"}}>
       <Nav/>
       <Wrapper className="App" style={{}}>
-          <Box><Image src={"https://images.unsplash.com/photo-1595257841889-eca2678454e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"}></Image></Box>
+          <Box><Video play loop muted autoPlay src={Main_video}/></Box>
           <Box two><Cat_frames one/><Cat_frames two/><Cat_frames three/><Cat_frames four/><Cat_frames five/><Cat_frames six/><Cat_frames seven/></Box>
           <Box three wide>¿Qué comemos hoy?</Box>
       </Wrapper>
