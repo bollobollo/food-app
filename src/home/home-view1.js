@@ -1,6 +1,7 @@
 import styled, {css, keyframes} from "styled-components";
 import Nav from '../common/navbar.js';
 import Main_video from '../video/main_cook.mp4';
+import Icon1 from '../img/icons/icon1.png';
 
 const scale = keyframes`
   0%{transform: scale(1, 1);}
@@ -40,6 +41,7 @@ const Box = styled.div`
   ${props => props.two && css`
     background: transparent;
     color: black;
+    cursor: pointer;
     //Posicionamiento por línea
     grid-column: 2 / 3;
     grid-row: 1 / 6;
@@ -52,11 +54,13 @@ const Box = styled.div`
     border-radius: 0 0 2vw 2vw;
     background: #D9D9D9;
     color: black;
+    cursor: pointer;
     //Posicionamiento por línea
     grid-column: 2 / 3;
     grid-row: 6 / 9;
 
     ${props => props.wide && css`
+      cursor: pointer;
       padding: .125em;
       background: rgb(37,37,224);
       background: linear-gradient(90deg, rgba(37,37,224,0) 10%, rgba(37,37,224,0.6503460912052117) 49%, rgba(37,37,224,1) 76%);
@@ -78,6 +82,13 @@ const Text = styled.p`
 
 const Video = styled.video`
   border-radius: 2vw;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%`;
+
+const Icon = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -138,7 +149,7 @@ function HView1() {
       <Nav/>
       <Wrapper className="App" style={{}}>
           <Box><Video play loop muted autoPlay src={Main_video}/></Box>
-          <Box two><Cat_frames one/><Cat_frames two/><Cat_frames three/><Cat_frames four/><Cat_frames five/><Cat_frames six/><Cat_frames seven/></Box>
+          <Box two><Cat_frames one><Icon src={Icon1} alt={'icono'}/></Cat_frames><Cat_frames two/><Cat_frames three/><Cat_frames four/><Cat_frames five/><Cat_frames six/><Cat_frames seven/></Box>
           <Box three wide>¿Qué comemos hoy?</Box>
       </Wrapper>
     </div>
