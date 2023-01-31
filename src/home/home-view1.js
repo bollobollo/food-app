@@ -4,6 +4,10 @@ import Main_video from '../video/main_cook.mp4';
 import Icon1 from '../img/icons/icon1.png';
 import Icon2 from '../img/icons/icon2.png';
 import Icon3 from '../img/icons/icon3.png';
+import Icon4 from '../img/icons/icon4.png';
+import Icon5 from '../img/icons/icon5.png';
+import Icon6 from '../img/icons/icon6.png';
+import Icon7 from '../img/icons/icon7.png';
 
 const scale = keyframes`
   0%{transform: scale(1, 1);}
@@ -53,7 +57,7 @@ const Box = styled.div`
   `}
 
   ${props => props.three && css`
-    border-radius: 0 0 2vw 2vw;
+    border-radius: 0 2vw 0 0;
     background: #D9D9D9;
     color: black;
     //Posicionamiento por línea
@@ -62,13 +66,14 @@ const Box = styled.div`
 
     ${props => props.wide && css`
       padding: .125em;
-      background: rgb(37,37,224);
-      background: linear-gradient(90deg, rgba(37,37,224,0) 10%, rgba(37,37,224,0.6503460912052117) 49%, rgba(37,37,224,1) 76%);
+      background: transparent;
       color: white;
       text-align: right;
       font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
       font-weight: bold;
       font-size: 6.7vw;
+      -webkit-text-stroke: .1vw #3C0CA3;
+      text-shadow: .50vw .39vw 0px yellow;
     `}
   `}
 `;
@@ -102,6 +107,7 @@ const Cat_frames = styled.a`
   font-family: Times New Roman, "Trebuchet MS", Verdana, sans-serif;
   &:hover {
     animation: ${scale} 150ms cubic-bezier(0.1, 1.7, 1.0, 1.9) forwards;
+    filter: contrast(150%) brightness(85%);
   }
 
   
@@ -149,7 +155,7 @@ function HView1() {
       <Nav/>
       <Wrapper className="App" style={{}}>
           <Box><Video play loop muted autoPlay src={Main_video}/></Box>
-          <Box two><Cat_frames one><Icon src={Icon1} alt={'icono'}/></Cat_frames><Cat_frames two><Icon src={Icon2} alt={'icono'}/></Cat_frames><Cat_frames three><Icon src={Icon3} alt={'icono'}/></Cat_frames><Cat_frames four/><Cat_frames five/><Cat_frames six/><Cat_frames seven/></Box>
+          <Box two><Cat_frames one><Icon src={Icon1} alt={'icono'}/></Cat_frames><Cat_frames two><Icon src={Icon2} alt={'icono'}/></Cat_frames><Cat_frames three><Icon src={Icon3} alt={'icono'}/></Cat_frames><Cat_frames four><Icon src={Icon4} alt={'icono'}/></Cat_frames><Cat_frames five><Icon src={Icon5} alt={'icono'}/></Cat_frames><Cat_frames six><Icon src={Icon6} alt={'icono'}/></Cat_frames><Cat_frames seven><Icon src={Icon7} alt={'icono'}/></Cat_frames></Box>
           <Box three wide>¿Qué comemos hoy?</Box>
       </Wrapper>
     </div>

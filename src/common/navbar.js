@@ -15,6 +15,7 @@ const Nav = styled.div`
 
 const Nav_logo = styled.div`
   display: flex;
+  overflow: auto;
   align-items: center;
   justify-content: start;
   height: 100%;
@@ -26,10 +27,12 @@ const Nav_logo = styled.div`
   padding-left: 4vw;
   cursor: pointer;
   color: white;
-  text-shadow: .29vw .25vw 1px blue;
+  text-shadow: .29vw .20vw 0px blue;
+  -webkit-text-stroke: .5px black;
   transition: all 150ms ease-in-out;
   &:hover{
     color: blue;
+    -webkit-text-stroke: .5px yellow;
     text-shadow: .29vw .25vw 1px white;
   }
   `;
@@ -56,6 +59,7 @@ const Nav_reg = styled.div`
     content: '?';
   }
   color: white;
+  -webkit-text-stroke: .1px #3C0CA3;
   transition: color 150ms ease-in-out;
   &:hover{
     color: #FFD500;
