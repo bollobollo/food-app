@@ -63,6 +63,7 @@ const Nav_reg = styled.div`
   transition: color 150ms ease-in-out;
   &:hover{
     color: #FFD500;
+    -webkit-text-stroke: .2px black;
   }`;
 
 const Nav_log = styled.div`
@@ -72,14 +73,20 @@ const Nav_log = styled.div`
   transition: color 150ms ease-in-out;
   &:hover{
     color: blue;
+    -webkit-text-stroke: .2px white;
   }
   `;
-  
 
+const Line = styled.div`
+  z-index: 0;
+  height: 20%;
+  width: 4.7em;
+  background: yellow;
+  position: absolute;`;
 
 function Navbar() {
     return (
-      <Nav><Nav_logo>Food App</Nav_logo><Nav_user><Nav_reg>sign up</Nav_reg><Nav_log>sign in</Nav_log></Nav_user></Nav>
+      <Nav><Nav_logo>Food App<Line/></Nav_logo><Nav_user><Nav_reg>sign up</Nav_reg><Nav_log>sign in</Nav_log></Nav_user></Nav>
     );
   }
 

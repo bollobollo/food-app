@@ -65,6 +65,7 @@ const Box = styled.div`
     grid-row: 6 / 9;
 
     ${props => props.wide && css`
+      position: relative;
       padding: .125em;
       background: transparent;
       color: white;
@@ -74,6 +75,14 @@ const Box = styled.div`
       font-size: 6.7vw;
       -webkit-text-stroke: .1vw #3C0CA3;
       text-shadow: .50vw .39vw 0px yellow;
+      transition: all 120ms cubic-bezier(0, 0.8, .9, 1);
+      &:hover{
+        bottom: 1vh;
+        transform: scale(1.03, 1.03);
+        color: #F72585;
+        -webkit-text-stroke: .1vw #3C0CA3;
+        text-shadow: .50vw .39vw 0px white;
+      }
     `}
   `}
 `;
@@ -103,11 +112,13 @@ const Icon = styled.img`
 //35 horizontal, 41 vertical
 
 const Cat_frames = styled.a`
+  overflow: hidden;
   background: transparent;
   font-family: Times New Roman, "Trebuchet MS", Verdana, sans-serif;
+  transition: filter 100ms ease-in-out;
   &:hover {
     animation: ${scale} 150ms cubic-bezier(0.1, 1.7, 1.0, 1.9) forwards;
-    filter: contrast(150%) brightness(85%);
+    filter: contrast(150%) brightness(95%);
   }
 
   
@@ -122,6 +133,7 @@ const Cat_frames = styled.a`
   grid-row: 1 / 21;`}
   
   ${props => props.three && css`
+  border-radius: 0 2vh 0 0;
   background: yellow;
   grid-column: 27 / 41;
   grid-row: 1 / 14 ;`}
@@ -137,7 +149,6 @@ const Cat_frames = styled.a`
   grid-row: 14 / 21;`}
   
   ${props => props.six && css`
-  border-radius: 0 0 0 2vh;
   background: pink;
   grid-column: 1 / 20;
   grid-row: 21 / 41;`}
