@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 
 const Nav = styled.div`
+  z-index: 100;
   display: flex;
   box-sizing: content-box;
   height: 6vh;
@@ -11,9 +12,10 @@ const Nav = styled.div`
   min-height: 32px;
   background: #F72585;
   opacity: 100%;
-  position: absolute;`;
+  position: fixed;`;
 
 const Nav_logo = styled.div`
+  z-index: 2;
   display: flex;
   overflow: auto;
   align-items: center;
@@ -48,8 +50,7 @@ const Nav_user = styled.div`
   min-height: 32px;
   font-weight: bold;
   font-size: 140%;
-  text-align: right;
-  `;
+  text-align: right;`;
 
 const Nav_reg = styled.div`
   margin-right: 2vw;
@@ -78,15 +79,22 @@ const Nav_log = styled.div`
   `;
 
 const Line = styled.div`
-  z-index: 0;
+  border: black 1px solid;
+  position: absolute;
+  top: 49%;
+  z-index: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
   height: 20%;
-  width: 4.7em;
-  background: yellow;
-  position: absolute;`;
+  width: 8.6em;
+  margin-left: 3.8vw;
+  background: yellow;`;
 
 function Navbar() {
     return (
-      <Nav><Nav_logo>Food App<Line/></Nav_logo><Nav_user><Nav_reg>sign up</Nav_reg><Nav_log>sign in</Nav_log></Nav_user></Nav>
+      <Nav><Line/><Nav_logo>Food App</Nav_logo><Nav_user><Nav_reg>sign up</Nav_reg><Nav_log>sign in</Nav_log></Nav_user></Nav>
     );
   }
 

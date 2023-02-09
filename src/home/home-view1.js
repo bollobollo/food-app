@@ -65,6 +65,7 @@ const Box = styled.div`
     grid-row: 6 / 9;
 
     ${props => props.wide && css`
+      border-radius: 2vw 2vw 2vw 0;
       position: relative;
       padding: .125em;
       background: transparent;
@@ -75,13 +76,13 @@ const Box = styled.div`
       font-size: 6.7vw;
       -webkit-text-stroke: .1vw #3C0CA3;
       text-shadow: .50vw .39vw 0px yellow;
-      transition: all 120ms cubic-bezier(0, 0.8, .9, 1);
+      transition: all 160ms cubic-bezier(0, 0.2, .9, 1);
       &:hover{
         bottom: 1vh;
         transform: scale(1.03, 1.03);
-        color: #F72585;
         -webkit-text-stroke: .1vw #3C0CA3;
-        text-shadow: .50vw .39vw 0px white;
+        text-shadow: .50vw .39vw 0px #F72585;
+        box-shadow: .1em .1em 20px yellow;
       }
     `}
   `}
@@ -91,8 +92,7 @@ const Text = styled.p`
   width: 250px;
   height: 500px;
   background: gray;
-  color: black;
-`;
+  color: black;`;
 
 const Video = styled.video`
   border-radius: 2vw;
@@ -162,7 +162,7 @@ const Cat_frames = styled.a`
 
 function HView1() {
   return (
-    <div style={{boxSizing: "content-box", height: "100vh", width: "100%", display: "flex"}}>
+    <div style={{boxSizing: "content-box", height: "100vh", width: "100%", display: "flex", background: "#3C0CA3"}}>
       <Nav/>
       <Wrapper className="App" style={{}}>
           <Box><Video play loop muted autoPlay src={Main_video}/></Box>
