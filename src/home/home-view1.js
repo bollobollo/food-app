@@ -73,7 +73,7 @@ const Box = styled.div`
       text-align: right;
       font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
       font-weight: bold;
-      font-size: 6.7vw;
+      font-size: clamp(1rem, 9vh, 50rem); 
       -webkit-text-stroke: .1vw #3C0CA3;
       text-shadow: .50vw .39vw 0px yellow;
       transition: all 160ms cubic-bezier(0, 0.2, .9, 1);
