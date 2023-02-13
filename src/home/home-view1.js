@@ -16,7 +16,7 @@ const scale = keyframes`
 const Wrapper = styled.div`
   // Dimensiones de la caja
   box-sizing: content-box;
-  height: 93vh;
+  height: 92vh;
   width: 100%;
   max-width: 2000px;
   min-width: 800px;
@@ -119,6 +119,7 @@ const Cat_frames = styled.a`
   &:hover {
     animation: ${scale} 150ms cubic-bezier(0.1, 1.7, 1.0, 1.9) forwards;
     filter: contrast(150%) brightness(95%);
+    box-shadow: .1em .1em 20px yellow;
   }
 
   

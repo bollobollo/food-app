@@ -1,14 +1,17 @@
 import styled, {css, keyframes} from "styled-components";
-import Nav from '../common/navbar.js';
+
+const scale = keyframes`
+  0%{transform: scale(1, 1);}
+  100%{transform: scale(1.05, 1.05);}`;
 
 const Wrapper = styled.div`
   // Dimensiones de la caja
   box-sizing: content-box;
-  height: 100vh;
+  height: 93vh;
   width: 100%;
   max-width: 2000px;
   min-width: 800px;
-  padding-top: 7vh;
+  padding-top: 4vh;
   padding-left: 4vw;
   padding-right: 4vw;
   
@@ -31,25 +34,79 @@ const Box = styled.div`
     //Posicionamiento por línea
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    //Creación de grid para este componente en particular
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
 
   ${props => props.two && css`
-    background: #6041a3;
+    /*background: #6041a3;*/
+    background: transparent;
     color: black;
-    cursor: pointer;
+    overflow-y: hidden scroll;
+    overflow-x: hidden;
     //Posicionamiento por línea
     grid-column: 2 / 8;
     grid-row: 1 / 2;
+    // flex
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
   `}
 `;
 
+const Filter = styled.a`
+    background: red;
+    cursor: pointer;
+    grid-column: 1;
+    grid-row: 1 / 2;
+    &:hover {
+    animation: ${scale} 150ms cubic-bezier(0.1, 1.7, 1.0, 1.9) forwards;
+    filter: contrast(150%) brightness(95%);
+    box-shadow: .1em .1em 20px orange;
+  }
+    
+    ${props => props.two && css`
+    background: yellow;
+    grid-column: 1;
+    grid-row: 2 / 3;
+    `}
+  
+    ${props => props.three && css`
+      background: white;
+      grid-column: 1;
+      grid-row: 3 / 4;
+    `}
+
+    ${props => props.four && css`
+      background: green;
+      grid-column: 1;
+      grid-row: 4 / 5;
+    `}
+`;
+
 const Rest = styled.a`
+    width: 30%;
+    height: 31%;
+    margin: .7%;
+    background: white;
+    border-radius: 1vw;
+    transition: width 500ms;
+    transition-delay: 500ms;
+    &:hover {
+    animation: ${scale} 150ms cubic-bezier(0.1, 1.7, 1.0, 1.9) forwards;
+    filter: contrast(150%) brightness(95%);
+    box-shadow: .1em .1em 4px yellow; 
+    animation-delay: 500ms;
+  }
     `;
 
 function HView2() {
     return (
       <div style={{boxSizing: "content-box", height: "100%", width: "100%", display: "flex", background: "#3C0CA3"}}>
-        <Wrapper><Box></Box><Box two></Box></Wrapper>
+        <Wrapper><Box><Filter>Hola</Filter><Filter two>Hola</Filter><Filter three>Hola</Filter><Filter four>Hola</Filter></Box><Box two><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/></Box></Wrapper>
       </div>
     );
   }

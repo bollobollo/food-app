@@ -31,7 +31,7 @@ const Nav_logo = styled.div`
   color: white;
   text-shadow: .29vw .20vw 0px blue;
   -webkit-text-stroke: .5px black;
-  transition: all 150ms ease-in-out;
+  transition: all 100ms ease-in-out;
   &:hover{
     color: blue;
     -webkit-text-stroke: .5px yellow;
