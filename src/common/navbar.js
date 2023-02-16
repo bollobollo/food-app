@@ -17,7 +17,7 @@ const Nav = styled.div`
 const Nav_logo = styled.div`
   z-index: 2;
   display: flex;
-  overflow: auto;
+  overflow: hidden;
   align-items: center;
   justify-content: start;
   height: 100%;
@@ -64,7 +64,7 @@ const Nav_reg = styled.div`
   transition: color 150ms ease-in-out;
   &:hover{
     color: #FFD500;
-    -webkit-text-stroke: .2px black;
+    -webkit-text-stroke: .2px blue;
   }`;
 
 const Nav_log = styled.div`

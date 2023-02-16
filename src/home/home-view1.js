@@ -1,13 +1,13 @@
 import styled, {css, keyframes} from "styled-components";
 import Nav from '../common/navbar.js';
 import Main_video from '../video/main_cook.mp4';
-import Icon1 from '../img/icons/icon1.png';
-import Icon2 from '../img/icons/icon2.png';
-import Icon3 from '../img/icons/icon3.png';
-import Icon4 from '../img/icons/icon4.png';
-import Icon5 from '../img/icons/icon5.png';
-import Icon6 from '../img/icons/icon6.png';
-import Icon7 from '../img/icons/icon7.png';
+import Icon1 from '../img/food/icon1.jpg';
+import Icon2 from '../img/food/icon2.jpg';
+import Icon3 from '../img/food/icon3.jpg';
+import Icon4 from '../img/food/icon4.jpg';
+import Icon5 from '../img/food/icon5.jpg';
+import Icon6 from '../img/food/icon6.jpg';
+import Icon7 from '../img/food/icon7.jpg';
 
 const scale = keyframes`
   0%{transform: scale(1, 1);}
@@ -82,7 +82,9 @@ const Box = styled.div`
         transform: scale(1.03, 1.03);
         -webkit-text-stroke: .1vw #3C0CA3;
         text-shadow: .50vw .39vw 0px #F72585;
-        box-shadow: .1em .1em 20px yellow;
+        box-shadow: .1em .1em 0px yellow;
+        background: rgb(60,12,163);
+        background: linear-gradient(270deg, rgba(60,12,163,1) 50%, rgba(135,12,163,1) 97%);
       }
     `}
   `}
@@ -119,44 +121,37 @@ const Cat_frames = styled.a`
   &:hover {
     animation: ${scale} 150ms cubic-bezier(0.1, 1.7, 1.0, 1.9) forwards;
     filter: contrast(150%) brightness(95%);
-    box-shadow: .1em .1em 20px yellow;
+    box-shadow: .1em .2em 0px yellow;
   }
 
   
   ${props => props.one && css`
-  background: red;
   grid-column: 1 / 7;
   grid-row: 1 / 7 ;`}
 
   ${props => props.two && css`
-  background: blue;
   grid-column: 7 / 27;
   grid-row: 1 / 21;`}
   
   ${props => props.three && css`
   border-radius: 0 2vh 0 0;
-  background: yellow;
   grid-column: 27 / 41;
   grid-row: 1 / 14 ;`}
   
   ${props => props.four && css`
-  background: purple;
   grid-column: 1 / 7;
   grid-row: 7 / 21;`}
   
   ${props => props.five && css`
-  background: green;
   grid-column: 27 / 41;
   grid-row: 14 / 21;`}
   
   ${props => props.six && css`
-  background: pink;
   grid-column: 1 / 20;
   grid-row: 21 / 41;`}
   
   ${props => props.seven && css`
   border-radius: 0 0 2vh 0;
-  background: #FDC500;
   grid-column: 20 / 41;
   grid-row: 21 / 41;`};`
 
@@ -167,7 +162,8 @@ function HView1() {
       <Nav/>
       <Wrapper className="App" style={{}}>
           <Box><Video play loop muted autoPlay src={Main_video}/></Box>
-          <Box two><Cat_frames one><Icon src={Icon1} alt={'icono'}/></Cat_frames><Cat_frames two><Icon src={Icon2} alt={'icono'}/></Cat_frames><Cat_frames three><Icon src={Icon3} alt={'icono'}/></Cat_frames><Cat_frames four><Icon src={Icon4} alt={'icono'}/></Cat_frames><Cat_frames five><Icon src={Icon5} alt={'icono'}/></Cat_frames><Cat_frames six><Icon src={Icon6} alt={'icono'}/></Cat_frames><Cat_frames seven><Icon src={Icon7} alt={'icono'}/></Cat_frames></Box>
+          <Box two><Cat_frames one><Icon src={Icon1} alt={'icono'}/></Cat_frames><Cat_frames two><Icon src={Icon2} alt={'icono'}/></Cat_frames><Cat_frames three><Icon src={Icon3} alt={'icono'}/>
+  </Cat_frames><Cat_frames four><Icon src={Icon4} alt={'icono'}/></Cat_frames><Cat_frames five><Icon src={Icon5} alt={'icono'}/></Cat_frames><Cat_frames six><Icon src={Icon6} alt={'icono'}/></Cat_frames><Cat_frames seven><Icon src={Icon7} alt={'icono'}/></Cat_frames></Box>
           <Box three wide>¿Qué comemos hoy?</Box>
       </Wrapper>
     </div>
