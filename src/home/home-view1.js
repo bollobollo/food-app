@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 
 const Box = styled.div`
   background: #4C6F7A;
-  border-radius: 2vw;
+  border-radius: 2vw 0 0 2vw;
   word-wrap: break-word;
   //Posicionamiento por línea
   grid-column: 1;
@@ -65,7 +65,7 @@ const Box = styled.div`
     grid-row: 6 / 9;
 
     ${props => props.wide && css`
-      border-radius: 2vw 2vw 2vw 0;
+      border-radius: 0 0 2vw 0;
       position: relative;
       padding: .125em;
       background: transparent;
@@ -78,8 +78,6 @@ const Box = styled.div`
       text-shadow: .50vw .39vw 0px yellow;
       transition: all 160ms cubic-bezier(0, 0.2, .9, 1);
       &:hover{
-        bottom: 1vh;
-        transform: scale(1.03, 1.03);
         -webkit-text-stroke: .1vw #3C0CA3;
         text-shadow: .50vw .39vw 0px #F72585;
         box-shadow: .1em .1em 0px yellow;
@@ -97,7 +95,7 @@ const Text = styled.p`
   color: black;`;
 
 const Video = styled.video`
-  border-radius: 2vw;
+  border-radius: 2vw 0 0 2vw;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -151,7 +149,7 @@ const Cat_frames = styled.a`
   grid-row: 21 / 41;`}
   
   ${props => props.seven && css`
-  border-radius: 0 0 2vh 0;
+  border-radius: 0 0 0 0;
   grid-column: 20 / 41;
   grid-row: 21 / 41;`};`
 
