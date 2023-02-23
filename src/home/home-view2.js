@@ -46,7 +46,7 @@ const Box = styled.div`
     min-height: 200px;
     background: transparent;
     color: black;
-    overflow-y: hidden scroll;
+    overflow-y: visible;
     overflow-x: hidden;
     //Posicionamiento por línea
     grid-column: 2 / 8;
