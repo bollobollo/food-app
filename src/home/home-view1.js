@@ -162,7 +162,7 @@ function HView1() {
           <Box><Video play loop muted autoPlay src={Main_video}/></Box>
           <Box two><Cat_frames one><Icon src={Icon1} alt={'icono'}/></Cat_frames><Cat_frames two><Icon src={Icon2} alt={'icono'}/></Cat_frames><Cat_frames three><Icon src={Icon3} alt={'icono'}/>
   </Cat_frames><Cat_frames four><Icon src={Icon4} alt={'icono'}/></Cat_frames><Cat_frames five><Icon src={Icon5} alt={'icono'}/></Cat_frames><Cat_frames six><Icon src={Icon6} alt={'icono'}/></Cat_frames><Cat_frames seven><Icon src={Icon7} alt={'icono'}/></Cat_frames></Box>
-          <Box three wide>¿Qué comemos hoy?</Box>
+          <Box three wide>¿Qué <br/> comemos <br/> hoy?</Box>
       </Wrapper>
     </div>
   );
