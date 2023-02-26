@@ -42,6 +42,13 @@ const TextBr = styled.div`
   grid-row: 1 / 8;`;
 
 const Title = styled.div`
+  grid-column: 5 / 9;
+  grid-row: 1 / 2;
+  max-width: 100%;
+  overflow: hidden;
+  display:inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   margin-left: 1.5%;
   padding-top: 2%;
   padding-left: 1%;
@@ -49,8 +56,6 @@ const Title = styled.div`
   font-weight: bold;
   font-size: clamp(.5rem, 1.7rem, 5rem);
   color: black;
-  grid-column: 5 / 9;
-  grid-row: 1 / 2;
   transition: all 100ms cubic-bezier(0, 0.2, .9, 1);
   
   &:hover {
@@ -62,12 +67,16 @@ const Title = styled.div`
 const Des = styled.div`
   grid-column: 5 / 9;
   grid-row: 2 / 7;
+  display: block;
+  max-height: 65%;
   background: transparent;
   margin-left: 1.5%;
   padding-left: 2.5%;
   padding-right: 2.5%;
   padding-top: 2.5%;
-  font-size: clamp(.5rem, 1rem, 5rem);`;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: clamp(.2rem, auto, 5rem);`;
 
 const SeeM = styled.a`
   grid-column: 5 / 9;
@@ -94,8 +103,8 @@ function Rest() {
         <Img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
       </Imgbox>
       <TextBr>
-        <Title>Pollo Poyo</Title>
-        <Des>This is a fake description of a restaurant that doesn't even exist but I need as an example for work porpuses.</Des>
+        <Title>Poyo Poyo(Paseo de Los Leones)</Title>
+        <Des>This is a fake description of a restaurant that doesn't even exist but I need as an example for work porpuses. word word word word word word word word word hola text palabra</Des>
       </TextBr>
       <SeeM>➜</SeeM>
     </Box>
