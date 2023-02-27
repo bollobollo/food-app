@@ -8,6 +8,7 @@ const scale = keyframes`
 const Wrapper = styled.div`
   // Dimensiones de la caja
   box-sizing: content-box;
+  min-width: 200px;
   height: 93vh;
   width: 100%;
   max-width: 2000px;
@@ -56,6 +57,15 @@ const Box = styled.div`
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+
+    ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #F72585;
+    border-radius: 20vw;
+  }
   `}
 `;
 
@@ -91,7 +101,7 @@ const Filter = styled.a`
 
 function HView2() {
     return (
-      <div style={{boxSizing: "content-box", height: "100%", width: "100%", display: "flex", background: "#3C0CA3"}}>
+      <div style={{boxSizing: "content-box", height: "100%", width: "100%", minWidth: "100px", display: "flex", background: "#3C0CA3"}}>
         <Wrapper><Box><Filter>Hola</Filter><Filter two>Hola</Filter><Filter three>Hola</Filter><Filter four>Hola</Filter></Box><Box two><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/></Box></Wrapper>
       </div>
     );

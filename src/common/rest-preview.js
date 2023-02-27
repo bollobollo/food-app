@@ -18,8 +18,7 @@ const Box = styled.a`
     &:hover {
     box-shadow: .1em .2em 0px yellow; 
     animation-delay: 500ms;
-  }
-    `;
+  }`;
 
 const Imgbox = styled.div`
   background: blue;
@@ -74,9 +73,19 @@ const Des = styled.div`
   padding-left: 2.5%;
   padding-right: 2.5%;
   padding-top: 2.5%;
-  overflow: hidden;
+  overflow: hidden visible;
   text-overflow: ellipsis;
-  font-size: clamp(.2rem, auto, 5rem);`;
+  font-size: clamp(.2rem, auto, 5rem);
+
+  ::-webkit-scrollbar {
+    width: .5vw;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #F72585;
+    border-radius: .2vw;
+  }
+  `;
 
 const SeeM = styled.a`
   grid-column: 5 / 9;
@@ -93,7 +102,6 @@ const SeeM = styled.a`
   &:hover {
     background: blue;
     color: white;
-
   }`;
 
 function Rest() {
@@ -103,8 +111,8 @@ function Rest() {
         <Img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
       </Imgbox>
       <TextBr>
-        <Title>Poyo Poyo(Paseo de Los Leones)</Title>
-        <Des>This is a fake description of a restaurant that doesn't even exist but I need as an example for work porpuses. word word word word word word word word word hola text palabra</Des>
+        <Title>Pollo Matón (Cumbres)</Title>
+        <Des>This is a fake description of a restaurant that doesn't even exist but I need as an example for work porpuses.</Des>
       </TextBr>
       <SeeM>➜</SeeM>
     </Box>
