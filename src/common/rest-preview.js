@@ -41,16 +41,18 @@ const TextBr = styled.div`
   grid-row: 1 / 8;`;
 
 const Title = styled.div`
+  background: white;
   grid-column: 5 / 9;
   grid-row: 1 / 2;
+  border-radius: 0 1vw 0 0;
+  border-bottom: black solid 1px;
   max-width: 100%;
   overflow: hidden;
   display:inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-left: 1.5%;
   padding-top: 2%;
-  padding-left: 1%;
+  padding-left: 2.5%;
   text-align: left;
   font-weight: bold;
   font-size: clamp(.5rem, 1.7rem, 5rem);
@@ -97,12 +99,20 @@ const SeeM = styled.a`
   display:flex;
   align-items: center;
   justify-content: end;
-  transition: all 100ms cubic-bezier(0, 0.2, .9, 1);
+  transition: all 180ms cubic-bezier(0, 0.2, .9, 1);
   
   &:hover {
     background: blue;
     color: white;
-  }`;
+  };`;
+
+const Arrow = styled.div`
+  transition: all 300ms cubic-bezier(0, 0.8, .9, 1);
+    &:hover{
+    color: yellow;
+    transform: rotate(360deg)
+    };
+  `;
 
 function Rest() {
   return (
@@ -114,7 +124,7 @@ function Rest() {
         <Title>Pollo Matón (Cumbres)</Title>
         <Des>This is a fake description of a restaurant that doesn't even exist but I need as an example for work porpuses.</Des>
       </TextBr>
-      <SeeM>➜</SeeM>
+      <SeeM><Arrow>➜</Arrow></SeeM>
     </Box>
   );
 }

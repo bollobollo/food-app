@@ -58,6 +58,7 @@ const Box = styled.div`
 
   ${props => props.three && css`
     border-radius: 0 2vw 0 0;
+    margin-right
     background: #D9D9D9;
     color: black;
     //Posicionamiento por línea

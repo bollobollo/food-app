@@ -8,7 +8,6 @@ const scale = keyframes`
 const Wrapper = styled.div`
   // Dimensiones de la caja
   box-sizing: content-box;
-  min-width: 200px;
   height: 93vh;
   width: 100%;
   max-width: 2000px;
