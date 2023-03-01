@@ -5,10 +5,10 @@ const Box = styled.a`
     min-width: 200px;
     height: 35%;
     min-height: 200px;
-    margin: .7%;
     border-radius: 1vw;
     cursor: pointer;
     font-size: 1em;
+    margin: .7%;
     padding: .3em;
     display: grid;
     grid-template-columns: repeat(8 , 1fr);
@@ -46,7 +46,7 @@ const Title = styled.div`
   grid-row: 1 / 2;
   border-radius: 0 1vw 0 0;
   border-bottom: black solid 1px;
-  max-width: 100%;
+  max-width: 97.5%;
   overflow: hidden;
   display:inline-block;
   text-overflow: ellipsis;
@@ -55,7 +55,7 @@ const Title = styled.div`
   padding-left: 2.5%;
   text-align: left;
   font-weight: bold;
-  font-size: clamp(.5rem, 1.7rem, 5rem);
+  font-size: clamp(.5rem, 1.3rem, 5rem);
   color: black;
   transition: all 100ms cubic-bezier(0, 0.2, .9, 1);
   
@@ -99,7 +99,7 @@ const SeeM = styled.a`
   display:flex;
   align-items: center;
   justify-content: end;
-  transition: all 180ms cubic-bezier(0, 0.2, .9, 1);
+  transition: all 180ms cubic-bezier(0, 0.6, .9, 1);
   
   &:hover {
     background: blue;
