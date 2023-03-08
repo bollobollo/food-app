@@ -1,7 +1,6 @@
-import './App.css';
 import Home1 from './home/home-view1.js';
 import Home2 from './home/home-view2.js';
-import Article1 from './article/article-view1';
+import Article from './article/article-view.js';
 import styled, {css} from "styled-components";
 // import Ill from './home-illustration.js'
 

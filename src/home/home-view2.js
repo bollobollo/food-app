@@ -100,7 +100,7 @@ const Filter = styled.a`
 
 function HView2() {
     return (
-      <div style={{boxSizing: "content-box", height: "100%", width: "100%", minWidth: "100px", display: "flex", background: "#3C0CA3"}}>
+      <div style={{boxSizing: "content-box", height: "100%", width: "100%", minWidth: "1000px", display: "flex", background: "#3C0CA3", position: "relative"}}>
         <Wrapper><Box><Filter>Hola</Filter><Filter two>Hola</Filter><Filter three>Hola</Filter><Filter four>Hola</Filter></Box><Box two><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/><Rest/></Box></Wrapper>
       </div>
     );

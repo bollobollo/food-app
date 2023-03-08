@@ -157,7 +157,7 @@ const Cat_frames = styled.a`
 
 function HView1() {
   return (
-    <div style={{boxSizing: "content-box", height: "100vh", width: "100%", minWidth: "100px", display: "flex", background: "#3C0CA3"}}>
+    <div style={{boxSizing: "content-box", height: "100vh", width: "100%", minWidth: "1000px", display: "flex", background: "#3C0CA3", position: "relative"}}>
       <Nav/>
       <Wrapper className="App" style={{}}>
           <Box><Video play loop muted autoPlay src={Main_video}/></Box>

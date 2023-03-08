@@ -8,6 +8,7 @@ const Box = styled.a`
     border-radius: 1vw;
     cursor: pointer;
     font-size: 1em;
+    text-decoration: none;
     margin: .7%;
     padding: .3em;
     display: grid;
@@ -116,7 +117,7 @@ const Arrow = styled.div`
 
 function Rest() {
   return (
-    <Box>
+    <Box href="../article/article-view.js">
       <Imgbox>
         <Img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
       </Imgbox>
